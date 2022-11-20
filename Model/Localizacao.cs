@@ -68,5 +68,7 @@ namespace Model
         public int TravaSeguranca { get => travaSeguranca; set => travaSeguranca = value; }
         public string ObservacaoEsq { get => observacaoEsq; set => observacaoEsq = value; }
 
+
+
     }
 }

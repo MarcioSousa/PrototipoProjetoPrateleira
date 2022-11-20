@@ -1,0 +1,6 @@
+C:\Users\Marcio\source\repos\Prateleira\Model\bin\Debug\Model.dll
+C:\Users\Marcio\source\repos\Prateleira\Model\bin\Debug\Model.pdb
+C:\Users\Marcio\source\repos\Prateleira\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\Marcio\source\repos\Prateleira\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Marcio\source\repos\Prateleira\Model\obj\Debug\Model.dll
+C:\Users\Marcio\source\repos\Prateleira\Model\obj\Debug\Model.pdb

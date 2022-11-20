@@ -1,0 +1,9 @@
+C:\Users\Marcio\source\repos\Prateleira\Control\bin\Debug\BdPrateleira.mdf
+C:\Users\Marcio\source\repos\Prateleira\Control\bin\Debug\BdPrateleira_log.ldf
+C:\Users\Marcio\source\repos\Prateleira\Control\bin\Debug\Control.dll.config
+C:\Users\Marcio\source\repos\Prateleira\Control\bin\Debug\Control.dll
+C:\Users\Marcio\source\repos\Prateleira\Control\bin\Debug\Control.pdb
+C:\Users\Marcio\source\repos\Prateleira\Control\obj\Debug\Control.csproj.AssemblyReference.cache
+C:\Users\Marcio\source\repos\Prateleira\Control\obj\Debug\Control.csproj.CoreCompileInputs.cache
+C:\Users\Marcio\source\repos\Prateleira\Control\obj\Debug\Control.dll
+C:\Users\Marcio\source\repos\Prateleira\Control\obj\Debug\Control.pdb
