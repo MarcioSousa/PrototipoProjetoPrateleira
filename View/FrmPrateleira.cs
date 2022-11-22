@@ -19,12 +19,13 @@ namespace View
             DgvPrateleira.AutoGenerateColumns = false;
         }
 
-        private static void CarregaTodasPrateleiras()
+        private void CarregaTodasPrateleiras()
         {
             try
             {
                 Localizacao localizacao = new();
-
+                DgvPrateleira.DataSource = localizacao.ListarPrateleiras();
+                
             }
             catch (Exception ex)
             {
@@ -36,6 +37,7 @@ namespace View
         private void FrmPrateleira_Load(object sender, EventArgs e)
         {
             CarregaTodasPrateleiras();
+            
         }
     }
 }

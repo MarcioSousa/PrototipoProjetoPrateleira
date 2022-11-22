@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Control;
 
 namespace Model
 {
@@ -31,8 +33,9 @@ namespace Model
         private string riscoLongEsq; //bom, ruim, mais detalhes (verde amarelho vermelho VD AM VM)
         private int travaSeguranca;
         private string observacaoEsq;
+        private int nota;
 
-        public Localizacao(int codigo, DateTime dataEspecionamento, string rua, int numeroLinha, string colEsq, string riscoColEsq, int diagonal, int horizontal, int nivelLongarina, string t, string riscoLongEsq, int travaSeguranca, string observacaoEsq)
+        public Localizacao(int codigo, DateTime dataEspecionamento, string rua, int numeroLinha, string colEsq, string riscoColEsq, int diagonal, int horizontal, int nivelLongarina, string t, string riscoLongEsq, int travaSeguranca, string observacaoEsq, int nota)
         {
             this.Codigo = codigo;
             this.DataEspecionamento = dataEspecionamento;
@@ -47,11 +50,17 @@ namespace Model
             this.RiscoLongEsq = riscoLongEsq;
             this.TravaSeguranca = travaSeguranca;
             this.ObservacaoEsq = observacaoEsq;
+            this.Nota = nota;
         }
 
         public Localizacao()
         {
 
+        }
+
+        public Localizacao(int codigo)
+        {
+            Codigo = codigo;
         }
 
         public int Codigo { get => codigo; set => codigo = value; }
@@ -67,8 +76,35 @@ namespace Model
         public string RiscoLongEsq { get => riscoLongEsq; set => riscoLongEsq = value; }
         public int TravaSeguranca { get => travaSeguranca; set => travaSeguranca = value; }
         public string ObservacaoEsq { get => observacaoEsq; set => observacaoEsq = value; }
+        public int Nota { get => nota; set => nota = value; }
 
+        public List<Localizacao> ListarPrateleiras()
+        {
+            try
+            {
+                AcessoMdf acessoMdf = new AcessoMdf();
+                acessoMdf.LimparParametros();
 
+                List<Localizacao> localizacoes = new List<Localizacao>();
+
+                //PASSAR QUERY PARA DQL (DATA QUERY LANGUAGE)
+                DataTable dataTableLocalizacoes = acessoMdf.ExecutarConsulta(CommandType.Text, "SELECT * FROM Localizacao");
+
+                foreach (DataRow linha in dataTableLocalizacoes.Rows)
+                {
+                    //Localizacao localizacao = new Localizacao(Convert.ToInt32(linha["codigo"]), Convert.ToDateTime(linha["dataEspecionamento"]), linha["rua"].ToString(), Convert.ToInt32(linha["numeroLinha"]), linha["colEsq"].ToString(), linha["riscoColEsq"].ToString(), Convert.ToInt32(linha["diagonal"]), Convert.ToInt32(linha["horizontal"]), Convert.ToInt32(linha["nivelLongarina"]), linha["t"].ToString(), linha["riscoLongEsq"].ToString(), Convert.ToInt32(linha["travaSeguranca"]), linha["observacaoEsq"].ToString(), Convert.ToInt32(linha["nota"]));
+                    Localizacao localizacao = new Localizacao(Convert.ToInt32(linha["codigo"]));
+                    localizacoes.Add(localizacao);
+                }
+
+                return localizacoes;
+                
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
 
     }
 }

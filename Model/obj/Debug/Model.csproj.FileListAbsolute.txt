@@ -1,6 +1,12 @@
+C:\Users\Marcio\source\repos\Prateleira\Model\bin\Debug\BdPrateleira.mdf
+C:\Users\Marcio\source\repos\Prateleira\Model\bin\Debug\BdPrateleira_log.ldf
 C:\Users\Marcio\source\repos\Prateleira\Model\bin\Debug\Model.dll
 C:\Users\Marcio\source\repos\Prateleira\Model\bin\Debug\Model.pdb
+C:\Users\Marcio\source\repos\Prateleira\Model\bin\Debug\Control.dll
+C:\Users\Marcio\source\repos\Prateleira\Model\bin\Debug\Control.pdb
+C:\Users\Marcio\source\repos\Prateleira\Model\bin\Debug\Control.dll.config
 C:\Users\Marcio\source\repos\Prateleira\Model\obj\Debug\Model.csproj.AssemblyReference.cache
 C:\Users\Marcio\source\repos\Prateleira\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Marcio\source\repos\Prateleira\Model\obj\Debug\Model.csproj.CopyComplete
 C:\Users\Marcio\source\repos\Prateleira\Model\obj\Debug\Model.dll
 C:\Users\Marcio\source\repos\Prateleira\Model\obj\Debug\Model.pdb

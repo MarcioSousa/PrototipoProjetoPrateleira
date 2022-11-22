@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{14114CB7-52D5-4A5F-9CCD-5B1753A4C8A7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5390BD6F-A072-4143-997D-BB1830DDD0A4} = {5390BD6F-A072-4143-997D-BB1830DDD0A4}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Control", "Control\Control.csproj", "{5390BD6F-A072-4143-997D-BB1830DDD0A4}"
 EndProject

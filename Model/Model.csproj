@@ -44,5 +44,11 @@
     <Compile Include="Localizacao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Control\Control.csproj">
+      <Project>{5390bd6f-a072-4143-997d-bb1830ddd0a4}</Project>
+      <Name>Control</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
