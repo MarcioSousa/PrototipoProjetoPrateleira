@@ -8,6 +8,7 @@ namespace Control
 {
     public class Dml
     {
+        readonly AcessoMdf acessoMdf = new AcessoMdf();
 
     }
 }

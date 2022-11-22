@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.GbxDataGrid = new System.Windows.Forms.GroupBox();
             this.DgvPrateleira = new System.Windows.Forms.DataGridView();
             this.GbxDados = new System.Windows.Forms.GroupBox();
@@ -61,6 +62,7 @@
             this.BtnNovo = new System.Windows.Forms.Button();
             this.BtnAlterar = new System.Windows.Forms.Button();
             this.BtnExcluir = new System.Windows.Forms.Button();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GbxDataGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPrateleira)).BeginInit();
             this.GbxDados.SuspendLayout();
@@ -78,10 +80,17 @@
             // 
             // DgvPrateleira
             // 
+            this.DgvPrateleira.AllowUserToAddRows = false;
+            this.DgvPrateleira.AllowUserToDeleteRows = false;
             this.DgvPrateleira.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvPrateleira.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo});
             this.DgvPrateleira.Location = new System.Drawing.Point(6, 22);
+            this.DgvPrateleira.MultiSelect = false;
             this.DgvPrateleira.Name = "DgvPrateleira";
+            this.DgvPrateleira.RowHeadersVisible = false;
             this.DgvPrateleira.RowTemplate.Height = 25;
+            this.DgvPrateleira.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvPrateleira.Size = new System.Drawing.Size(764, 207);
             this.DgvPrateleira.TabIndex = 0;
             // 
@@ -366,6 +375,16 @@
             this.BtnExcluir.Text = "Excluir";
             this.BtnExcluir.UseVisualStyleBackColor = true;
             // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "Codigo";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Codigo.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 60;
+            // 
             // FrmPrateleira
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -422,5 +441,6 @@
         private Button BtnNovo;
         private Button BtnAlterar;
         private Button BtnExcluir;
+        private DataGridViewTextBoxColumn Codigo;
     }
 }

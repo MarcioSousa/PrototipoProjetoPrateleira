@@ -82,13 +82,10 @@ namespace Model
         {
             try
             {
-                AcessoMdf acessoMdf = new AcessoMdf();
-                acessoMdf.LimparParametros();
-
+                Dql dql = new Dql();
                 List<Localizacao> localizacoes = new List<Localizacao>();
 
-                //PASSAR QUERY PARA DQL (DATA QUERY LANGUAGE)
-                DataTable dataTableLocalizacoes = acessoMdf.ExecutarConsulta(CommandType.Text, "SELECT * FROM Localizacao");
+                DataTable dataTableLocalizacoes = dql.ListarTodasPrateleiras();
 
                 foreach (DataRow linha in dataTableLocalizacoes.Rows)
                 {
@@ -104,7 +101,9 @@ namespace Model
             {
                 throw new Exception(ex.Message);
             }
+
         }
 
     }
+
 }

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
+﻿using Control.Properties;
+using System;
 using System.Data;
-using System.Linq;
-using System.Runtime;
-using System.Text;
-using System.Threading.Tasks;
-using System.Configuration;
-using Control.Properties;
+using System.Data.SqlClient;
 
 namespace Control
 {
@@ -33,7 +27,6 @@ namespace Control
         {
             try
             {
-                int codigo;
 
                 SqlConnection sqlConnection = CriarConexao();
                 sqlConnection.Open();
@@ -48,10 +41,10 @@ namespace Control
                     sqlCommand.Parameters.Add(new SqlParameter(sqlParameter.ParameterName, sqlParameter.Value));
                 }
 
-                codigo = Convert.ToInt32(sqlCommand.ExecuteScalar());
+                sqlCommand.ExecuteScalar();
                 sqlConnection.Close();
 
-                return codigo;
+                return true;
             }
             catch (Exception ex)
             {
@@ -71,10 +64,10 @@ namespace Control
                 sqlCommand.CommandText = nomeStoreProcedureOuTextoSql;
                 sqlCommand.CommandTimeout = 7200;
 
-                foreach (SqlParameter sqlParameter in sqlParameterCollection)
-                {
-                    sqlCommand.Parameters.Add(new SqlParameter(sqlParameter.ParameterName, sqlParameter.Value));
-                }
+                //foreach (SqlParameter sqlParameter in sqlParameterCollection)
+                //{
+                //    sqlCommand.Parameters.Add(new SqlParameter(sqlParameter.ParameterName, sqlParameter.Value));
+                //}
 
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
                 DataTable dataTable = new DataTable();

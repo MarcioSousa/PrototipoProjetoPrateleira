@@ -25,6 +25,9 @@ namespace View
             {
                 Localizacao localizacao = new();
                 DgvPrateleira.DataSource = localizacao.ListarPrateleiras();
+
+                DgvPrateleira.Update();
+                DgvPrateleira.Refresh();
                 
             }
             catch (Exception ex)
